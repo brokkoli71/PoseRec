@@ -26,6 +26,11 @@ def _process_input(source_img, scale_factor=1.0, output_stride=16):
     input_img = input_img.reshape(1, target_height, target_width, 3)
     return input_img, source_img, scale
 
+def valid_resolution(width, height, output_stride=16):
+    target_width = (int(width) // output_stride) * output_stride + 1
+    target_height = (int(height) // output_stride) * output_stride + 1
+    return target_width, target_height
+
 with picamera.PiCamera() as camera:
     camera.resolution = (720, 720)
     camera.vflip = True
