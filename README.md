@@ -1,5 +1,6 @@
 # PoseRec
-extracts the pose of a image taken by the raspi and prints it in the image
+current state: extracts the pose of a image taken by the raspi and prints it in the image
+the aim is to implement gesture detection for controlling basic actions on RaspberryPi
 
 using:
 OpenCV, picamera, PoseNet
